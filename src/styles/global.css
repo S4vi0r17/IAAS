@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-iaas-blue: #0a4d8c;
+  --color-iaas-dark: #072a4a;
+  --color-iaas-light: #e8f0f8;
+  --color-iaas-accent: #1a6bb5;
+  --color-iaas-gray: #6b7280;
+  --color-iaas-bg: #f7f9fc;
+}
