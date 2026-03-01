@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+import labTesting from '../assets/lab-testing.webp';
 ---
 
 <!-- SECTION 6: CONTROL DE CALIDAD Y ENSAYOS DE LABORATORIO -->
@@ -81,10 +83,13 @@
 
       <!-- Right Column: Image -->
       <div class="relative min-h-75 sm:min-h-100 lg:min-h-0">
-        <img
-          src="/images/laboratorio-ensayos.webp"
+        <Picture
+          src={labTesting}
+          formats={['avif', 'webp']}
           alt="Máquina de ensayos de laboratorio para control de calidad de materiales"
           class="absolute inset-0 w-full h-full object-cover"
+          widths={[400, 800, 1200]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
         <!-- Overlay -->
         <div class="absolute inset-0 bg-linear-to-l from-transparent to-iaas-dark/10"></div>

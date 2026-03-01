@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+import environmentalMonitoring from '../assets/environmental-monitoring.jpg';
 ---
 
 <!-- SECTION 5: GESTIÓN Y MONITOREO AMBIENTAL -->
@@ -24,10 +26,13 @@
 
     <!-- Main Image -->
     <div class="relative rounded-2xl overflow-hidden shadow-lg mb-10 aspect-21/9">
-      <img
-        src="/images/monitoreo-ambiental.jpg"
+      <Picture
+        src={environmentalMonitoring}
+        formats={['avif', 'webp']}
         alt="Equipo de monitoreo ambiental realizando mediciones en campo"
         class="w-full h-full object-cover"
+        widths={[600, 1200, 1800]}
+        sizes="(max-width: 768px) 100vw, 1200px"
       />
       <div class="absolute inset-0 bg-linear-to-t from-iaas-dark/20 to-transparent"></div>
     </div>

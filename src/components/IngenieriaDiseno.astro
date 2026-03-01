@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+import engineeringBuilding from '../assets/engineering-building.webp';
 ---
 
 <!-- SECTION 8: INGENIERÍA, DISEÑO Y EXPEDIENTES TÉCNICOS -->
@@ -101,10 +103,13 @@
 
       <!-- Right Column: Image + Compromiso Box -->
       <div class="relative min-h-75 sm:min-h-100 lg:min-h-0">
-        <img
-          src="/images/ingenieria-edificacion.webp"
+        <Picture
+          src={engineeringBuilding}
+          formats={['avif', 'webp']}
           alt="Edificación moderna diseñada con expediente técnico integral"
           class="absolute inset-0 w-full h-full object-cover"
+          widths={[400, 800, 1200]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
 
         <!-- Logo watermark -->

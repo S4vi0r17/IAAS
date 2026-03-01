@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+import heroEngineer from '../assets/hero-engineer.jpeg';
 ---
 
 <!-- SECTION 1: HERO -->
@@ -51,10 +53,13 @@
 
         <!-- Main Image -->
         <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-4/3">
-          <img
-            src="/images/hero-engineer.jpeg"
+          <Picture
+            src={heroEngineer}
+            formats={['avif', 'webp']}
             alt="Ingeniero de IAAS supervisando proyecto de construcción"
             class="w-full h-full object-cover"
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"
           />
           <!-- Overlay gradient -->
           <div class="absolute inset-0 bg-linear-to-t from-iaas-dark/20 to-transparent"></div>

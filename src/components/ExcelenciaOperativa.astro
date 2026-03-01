@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import teamIaas from '../assets/team-iaas.jpg';
 ---
 
 <!-- SECTION 10: COMPROMISO CON LA EXCELENCIA OPERATIVA -->
@@ -71,10 +73,12 @@
 
       <!-- Image -->
       <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-16/10">
-        <img
-          src="/images/equipo-iaas.jpg"
+        <Image
+          src={teamIaas}
           alt="Equipo de profesionales de IAAS en campo"
           class="w-full h-full object-cover"
+          widths={[400, 800]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
         <div class="absolute inset-0 bg-linear-to-t from-iaas-dark/20 to-transparent"></div>
       </div>

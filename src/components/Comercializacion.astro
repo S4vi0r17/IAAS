@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+import heavyMachinery from '../assets/heavy-machinery.avif';
 ---
 
 <!-- SECTION 9: COMERCIALIZACIÓN Y SERVICIOS COMPLEMENTARIOS -->
@@ -26,10 +28,13 @@
     <div class="relative mb-10">
       <!-- Background Image -->
       <div class="relative rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-96">
-        <img
-          src="/images/maquinaria-pesada.avif"
+        <Picture
+          src={heavyMachinery}
+          formats={['avif', 'webp']}
           alt="Flota de maquinaria pesada para construcción"
           class="w-full h-full object-cover"
+          widths={[600, 1200, 1800]}
+          sizes="(max-width: 768px) 100vw, 1200px"
         />
         <div class="absolute inset-0 bg-linear-to-t from-iaas-dark/60 via-iaas-dark/20 to-transparent"></div>
       </div>

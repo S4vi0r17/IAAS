@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import ppeWorker from '../assets/ppe-worker.jpg';
 ---
 
 <!-- SECTION 4: GESTIÓN SST Y CUMPLIMIENTO NORMATIVO -->
@@ -138,10 +140,12 @@
         <div class="relative w-full max-w-sm">
           <!-- Central worker image -->
           <div class="relative mx-auto w-48 h-64 sm:w-56 sm:h-72">
-            <img
-              src="/images/epp-worker.jpg"
+            <Image
+              src={ppeWorker}
               alt="Trabajador con Equipo de Protección Personal completo"
               class="w-full h-full object-contain"
+              width={300}
+              height={400}
             />
           </div>
 
